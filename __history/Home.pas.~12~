@@ -1,0 +1,49 @@
+unit Home;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, jpeg, ExtCtrls, pngimage, StdCtrls;
+
+type
+  THomeB = class(TForm)
+    Image1: TImage;
+    Image2: TImage;
+    Button1: TButton;
+    Image3: TImage;
+    Image4: TImage;
+    Button2: TButton;
+    Button3: TButton;
+    Image5: TImage;
+    Image7: TImage;
+    IconContainer: TPanel;
+    procedure FormShow(Sender: TObject);
+    procedure Label1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  HomeB: THomeB;
+
+implementation
+
+uses splash, AdminLogin;
+
+{$R *.dfm}
+
+procedure THomeB.FormShow(Sender: TObject);
+begin
+   splashForm.showModal;
+end;
+
+procedure THomeB.Label1Click(Sender: TObject);
+begin
+  adminLog.Show;
+  dashBoard.Enabled:=false;
+end;
+
+end.

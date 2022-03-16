@@ -1,0 +1,11 @@
+
+unit ImagResize;
+interface
+ uses TBitmap;
+implementation
+
+ procedure ResizeBitMap(BitMap : TBitmap; const NewWidth, NewHeight :Integer );
+ begin
+       Bitmap.Canvas.StrechDraw(Rect(0,0,NewWidth,NewHeight);
+ end;
+end.

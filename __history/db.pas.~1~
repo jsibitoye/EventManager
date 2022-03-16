@@ -1,0 +1,39 @@
+unit db;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, DBXMySQL, FMTBcd, StdCtrls, DB, SqlExpr;
+
+type
+  TForm2 = class(TForm)
+    SqlCon: TSQLConnection;
+    query: TSQLQuery;
+    Button1: TButton;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.Button1Click(Sender: TObject);
+begin
+try
+  query.Close;
+  query.SQL.Text:='insert into staff(name) values(" joshua")';
+  query.Open;
+  query.Active:=true;
+  query.Close;
+  except
+end;
+end;
+end.

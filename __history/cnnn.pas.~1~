@@ -1,0 +1,28 @@
+unit cnnn;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, DBXMySQL, Grids, DBGrids, DB, DBClient, SimpleDS, SqlExpr;
+
+type
+  TForm2 = class(TForm)
+    con: TSQLConnection;
+    dset: TSimpleDataSet;
+    source: TDataSource;
+    DBGrid1: TDBGrid;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+end.

@@ -1,0 +1,41 @@
+unit home;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, pngimage, jpeg, ExtCtrls, StdCtrls;
+
+type
+  THomeForm = class(TForm)
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Image1: TImage;
+    Image2: TImage;
+    Image3: TImage;
+    Image4: TImage;
+    Image5: TImage;
+    Image7: TImage;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  HomeForm: THomeForm;
+
+implementation
+
+uses appUnit;
+
+{$R *.dfm}
+
+procedure THomeForm.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+Dashboard.close;
+end;
+
+end.
