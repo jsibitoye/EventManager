@@ -29,7 +29,7 @@ procedure Tjoshuaform.Button1Click(Sender: TObject);
 begin
 try
   query.Close;
-  query.SQL.Text:='insert into staff(name) values(" joshua")';
+  query.SQL.Text:='insert into staff(name) values("joshua")';
   query.Open;
   query.Active:=true;
   query.Close;
